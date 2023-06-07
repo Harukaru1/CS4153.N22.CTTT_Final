@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/background"
-    tools:context=".SignUp">
+    android:background="@drawable/main_bg"
+    tools:context=".Login">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -23,12 +23,12 @@
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
             android:padding="24dp"
-            android:background="@drawable/custom_edittext">
+            android:background="@drawable/edittext_no_underline">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign Up"
+                android:text="Sign up"
                 android:textSize="36sp"
                 android:textAlignment="center"
                 android:textStyle="bold"
@@ -37,8 +37,8 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/signup_email"
-                android:background="@drawable/custom_edittext"
+                android:id="@+id/sign_up_email"
+                android:background="@drawable/edittext_no_underline"
                 android:layout_marginTop="40dp"
                 android:padding="8dp"
                 android:hint="Email"
@@ -47,37 +47,39 @@
                 android:textColor="@color/black"/>
 
             <EditText
+                android:id="@+id/Sign_up_Password"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/signup_password"
-                android:background="@drawable/custom_edittext"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:padding="8dp"
-                android:hint="Password"
-                android:drawableLeft="@drawable/baseline_lock_24"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:ems="10"
+                android:hint="Password"
+                android:drawableLeft="@drawable/baseline_key_24"
+                android:drawableRight="@drawable/baseline_lock_24"
+                android:inputType="textPassword" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Sign Up"
-                android:id="@+id/signup_button"
+                android:text="Sign up"
+                android:id="@+id/sign_up_button"
                 android:textSize="18sp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/black"
                 app:cornerRadius = "20dp"/>
-            
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/LoginAlready"
-                android:text="Have an account ? Login"
+                android:id="@+id/LoginAlr"
+                android:text="Already have an account ? Login"
                 android:layout_gravity="center"
                 android:padding="8dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/black"
                 android:textSize="18sp"/>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

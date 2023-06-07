@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/background"
+    android:background="@drawable/main_bg"
     tools:context=".Login">
 
     <androidx.cardview.widget.CardView
@@ -23,7 +23,7 @@
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
             android:padding="24dp"
-            android:background="@drawable/custom_edittext">
+            android:background="@drawable/edittext_no_underline">
 
             <TextView
                 android:layout_width="match_parent"
@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/login_email"
-                android:background="@drawable/custom_edittext"
+                android:background="@drawable/edittext_no_underline"
                 android:layout_marginTop="40dp"
                 android:padding="8dp"
                 android:hint="Email"
@@ -47,16 +47,17 @@
                 android:textColor="@color/black"/>
 
             <EditText
+                android:id="@+id/Login_Password"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/login_password"
-                android:background="@drawable/custom_edittext"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:padding="8dp"
-                android:hint="Password"
-                android:drawableLeft="@drawable/baseline_lock_24"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:ems="10"
+                android:hint="Password"
+                android:drawableLeft="@drawable/baseline_key_24"
+                android:drawableRight="@drawable/baseline_lock_24"
+                android:inputType="textPassword" />
 
             <Button
                 android:layout_width="match_parent"
@@ -78,6 +79,7 @@
                 android:layout_marginTop="10dp"
                 android:textColor="@color/black"
                 android:textSize="18sp"/>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
