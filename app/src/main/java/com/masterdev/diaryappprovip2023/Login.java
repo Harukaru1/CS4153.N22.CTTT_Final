@@ -32,7 +32,7 @@ public class Login extends AppCompatActivity {
         loginPassword = findViewById(R.id.Login_Password);
         loginButton = findViewById(R.id.login_button);
         SignupRedirecet = findViewById(R.id.SignupAcc);
-        
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
