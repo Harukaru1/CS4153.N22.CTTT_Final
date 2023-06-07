@@ -5,8 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +26,7 @@ public class SignUp extends AppCompatActivity {
     private EditText signupEmail, signupPassword;
     private Button signupButton;
     private TextView loginRedirectText;
+    private CheckBox SignshowPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,20 @@ public class SignUp extends AppCompatActivity {
         signupPassword = findViewById(R.id.Sign_up_Password);
         signupButton = findViewById(R.id.sign_up_button);
         loginRedirectText = findViewById(R.id.LoginAlr);
+        SignshowPass = findViewById(R.id.showpasssign);
+
+        SignshowPass.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    signupPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    signupPassword.setSelection(signupPassword.getText().length());
+                } else {
+                    signupPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    signupPassword.setSelection(signupPassword.getText().length());
+                }
+            }
+        });
 
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override

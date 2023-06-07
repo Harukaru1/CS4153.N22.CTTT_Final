@@ -1,26 +1,36 @@
 {
   "project_info": {
-    "project_number": "144408173073",
-    "project_id": "diaryappprovip2023",
-    "storage_bucket": "diaryappprovip2023.appspot.com"
+    "project_number": "698760593216",
+    "project_id": "diary-project-49f77",
+    "storage_bucket": "diary-project-49f77.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:144408173073:android:50ff89378340fa15be6fb0",
+        "mobilesdk_app_id": "1:698760593216:android:e1549e94730de837d384a5",
         "android_client_info": {
           "package_name": "com.masterdev.diaryappprovip2023"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "698760593216-i4hv5ogkk8enoe0685psm5flhe2qudk3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyCNS-H2SEARH2YlGo-pKN7kVpucz5fByU0"
+          "current_key": "AIzaSyAkebGUNhYHUdQVwcV_bUS7Cpv1sZeAYN4"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698760593216-i4hv5ogkk8enoe0685psm5flhe2qudk3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

@@ -5,9 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +27,8 @@ public class Login extends AppCompatActivity {
     private TextView SignupRedirecet;
     private Button loginButton;
 
+    private CheckBox showPassword;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +38,20 @@ public class Login extends AppCompatActivity {
         loginPassword = findViewById(R.id.Login_Password);
         loginButton = findViewById(R.id.login_button);
         SignupRedirecet = findViewById(R.id.SignupAcc);
+        showPassword = findViewById(R.id.showpass);
 
+        showPassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    loginPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    loginPassword.setSelection(loginPassword.getText().length());
+                } else {
+                    loginPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    loginPassword.setSelection(loginPassword.getText().length());
+                }
+            }
+        });
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

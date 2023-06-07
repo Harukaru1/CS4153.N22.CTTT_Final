@@ -56,9 +56,13 @@
                 android:ems="10"
                 android:hint="Password"
                 android:drawableLeft="@drawable/baseline_key_24"
-                android:drawableRight="@drawable/baseline_lock_24"
                 android:inputType="textPassword" />
 
+           <CheckBox
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Show password"
+               android:id="@+id/showpass"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
