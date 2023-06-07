@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto"
-            android:text="TEST DAILY APP"
+            android:text="TEST DIARY APP"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="24dp"
